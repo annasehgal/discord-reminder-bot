@@ -1,0 +1,25 @@
+# refer to 0004 doc for updates on labeling PR's
+# ref: https://github.com/actions/labeler
+# no limits for personal project for now
+# changed-files-limits: # not defined
+#
+# label defintions: 
+documentation:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/**'
+
+architecture:
+  - changed-files:
+    - any-glob-to-any-file: 'docs/architecture/**'
+
+github:
+  - changed-files:
+    - any-glob-to-any-file: '.github/**'
+
+tests:
+  - changed-files:
+    - any-glob-to-any-file: 'tests/**'
+
+source: #for now until code is added
+  - changed-files:
+    - any-glob-to-any-file: 'src/**'
