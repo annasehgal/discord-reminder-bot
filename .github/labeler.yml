@@ -8,6 +8,9 @@ documentation:
   - changed-files:
     - any-glob-to-any-file: 'docs/**'
 
+decisions:
+  - any-glob-to-any-file: 'docs/decisions/**'
+
 architecture:
   - changed-files:
     - any-glob-to-any-file: 'docs/architecture/**'

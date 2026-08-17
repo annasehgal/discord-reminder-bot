@@ -43,7 +43,7 @@ For example:
 | ---------------------- | --------------- |
 | `docs/**`              | `documentation` |
 | `docs/architecture/**` | `architecture`  |
-| `docs/decisions/**`    | `documentation` |
+| `docs/decisions/**`    | `decisions` |
 | `.github/**`           | `github`        |
 | `src/**`               | `backend`       |
 | `tests/**`             | `test`          |
