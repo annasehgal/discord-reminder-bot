@@ -9,27 +9,34 @@ The system is designed to reduce manual tracking of assignments while allowing m
 ## System Architecture
 
 ```mermaid
-flowchart TD
-    U[Discord Users / Moderators]
-    D[Discord Bot]
+sequenceDiagram
+    participant C as Canvas API
+    participant R as Reminder Service
+    participant P as Persistence
+    participant D as Discord Bot
+    participant M as Moderator
+    participant S as Scheduler
+    participant U as User
 
-    C[Canvas API]
-    R[Reminder Service]
-    S[Scheduler / Background Tasks]
-    P[Persistence]
-    CA[Cache]
+    R->>C: Request assignment data
+    C-->>R: Return assignments
+    R->>R: Process assignments
+    R->>P: Store reminder state
+    R->>D: Send reminder for approval
+    D->>M: Present approval request
 
-    U --> D
-    D --> C
-    D --> R
-
-    C --> R
-    R --> S
-    R --> P
-    R --> CA
-
-    S --> D
-    D --> U
+    alt Approved
+        M->>D: Approve
+        D->>P: Update approval state
+        D->>S: Schedule reminder
+        S->>D: Trigger reminder
+        D->>U: Send grouped reminder
+    else Changes requested
+        M->>D: Request changes
+        D->>R: Update reminder
+        R->>P: Store updated state
+        D->>M: Present updated reminder
+    end
 ```
 
 ## Major Components
