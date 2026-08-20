@@ -23,6 +23,10 @@ tests:
   - changed-files:
     - any-glob-to-any-file: 'tests/**'
 
+README.md-documentation:
+  -changed-files:
+    - any-glob-to-any-file: 'README.md'
+
 source: #for now until code is added
   - changed-files:
     - any-glob-to-any-file: 'src/**'
