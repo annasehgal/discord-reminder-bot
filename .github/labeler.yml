@@ -9,7 +9,8 @@ documentation:
     - any-glob-to-any-file: 'docs/**'
 
 decisions:
-  - any-glob-to-any-file: 'docs/decisions/**'
+  - changed-files:
+    - any-glob-to-any-file: 'docs/decisions/**'
 
 architecture:
   - changed-files:
@@ -24,7 +25,7 @@ tests:
     - any-glob-to-any-file: 'tests/**'
 
 README.md-documentation:
-  -changed-files:
+  - changed-files:
     - any-glob-to-any-file: 'README.md'
 
 source: #for now until code is added

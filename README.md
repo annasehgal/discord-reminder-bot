@@ -35,4 +35,3 @@ The project uses feature branches and pull requests for development. Architectur
 ## License
 
 This project is licensed under the [AGPL-3.0](LICENSE).
-

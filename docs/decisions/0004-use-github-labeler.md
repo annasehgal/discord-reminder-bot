@@ -47,6 +47,7 @@ For example:
 | `.github/**`           | `github`        |
 | `src/**`               | `backend`       |
 | `tests/**`             | `test`          |
+| `README.md"`           | `README.md-documentation`          |
 
 Type labels such as `feature`, `bug`, `refactor`, and `docs` may be added manually or through future automation when the repository has enough implementation history to justify it.
 
