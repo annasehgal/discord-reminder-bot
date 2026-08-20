@@ -1,6 +1,8 @@
 # Discord Reminder Bot
 `discord-reminder-bot` is an open-source, privacy-aware Discord bot that helps users manage reminders from external services such as academic calendars and learning platforms. It retrieves selected events, formats their relevant details into consistent Discord reminders, and requires user approval before sending them. The bot is designed to support multiple Discord servers, configurable courses/event sources, role-based authorization, rate limiting, persistent scheduling, and reliable notification delivery.
 
+# Tech Stack (coming):
+
 # Architecture:
 The project architecture is documented separately and will evolve alongside the implementation.
 
