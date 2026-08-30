@@ -24,7 +24,7 @@ Describes the responsibilities and interactions of the application's major compo
 
 ### Architecture Decision Records
 
-Technology and architectural decisions are documented as Architecture Decision Records.
+Technology and architectural decisions are documented as Architecture Decision Records, including language, Discord library, package layout, configuration, testing, and how unimplemented components are stubbed.
 
 * [Architecture Decision Records](docs/decisions/)
 

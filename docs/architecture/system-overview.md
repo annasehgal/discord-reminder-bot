@@ -99,7 +99,7 @@ Potential data includes:
 * Approval status
 * Reminder history
 
-The specific persistence technology is determined separately from the system architecture.
+The specific persistence technology is determined separately from the system architecture. Current package locations and deferred choices are recorded in [ADR 0007](../decisions/0007-use-src-layout-and-component-packages.md) and [ADR 0010](../decisions/0010-stub-unimplemented-components.md).
 
 ### Cache
 
@@ -186,6 +186,6 @@ The system architecture prioritizes:
 ## Related Documentation
 
 * Component Architecture
-* Architecture Decision Records
+* [Architecture Decision Records](../decisions/)
 * GitHub Actions and Repository Automation
 
