@@ -225,11 +225,20 @@ The component architecture follows these principles:
 
 ## Technology Mapping
 
-Technology choices are intentionally kept separate from the component definitions.
+The architecture defines **what each component does**. How each part is implemented is recorded as Architecture Decision Records.
 
-The architecture defines **what each component does**, while the technology decisions define **how each component will be implemented**.
+| Component | Current mapping |
+| --------- | --------------- |
+| Discord Bot | `src/discord_reminder_bot/bot/` using discord.py ([0006](../decisions/0006-use-discord-py.md)) |
+| Command / Event Handling | `bot/commands/` and `bot/events/` |
+| Approval Handler | `src/discord_reminder_bot/approval/` (stub) |
+| Reminder Service | `src/discord_reminder_bot/reminders/` (stub) |
+| Canvas Integration | `src/discord_reminder_bot/canvas/` (stub) |
+| Scheduler | `src/discord_reminder_bot/scheduler/` (stub) |
+| Persistence | `src/discord_reminder_bot/persistence/` (stub; store technology not chosen) |
+| Cache | `src/discord_reminder_bot/cache/` in-memory store |
 
-Technology decisions will be documented separately through the project's Architecture Decision Records.
+Language, layout, configuration, tests, and stubs: [0005](../decisions/0005-use-python.md) through [0010](../decisions/0010-stub-unimplemented-components.md). Full path list: [0007](../decisions/0007-use-src-layout-and-component-packages.md).
 
 ## Related Documentation
 
