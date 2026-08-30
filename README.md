@@ -1,7 +1,11 @@
 # Discord Reminder Bot
 `discord-reminder-bot` is an open-source, privacy-aware Discord bot that helps users manage reminders from external services such as academic calendars and learning platforms. It retrieves selected events, formats their relevant details into consistent Discord reminders, and requires user approval before sending them. The bot is designed to support multiple Discord servers, configurable courses/event sources, role-based authorization, rate limiting, persistent scheduling, and reliable notification delivery.
 
-# Tech Stack (coming):
+# Tech Stack
+
+* Python 3.11+
+* [discord.py](https://github.com/Rapptz/discord.py) — Discord bot framework
+* python-dotenv — environment-based configuration
 
 # Architecture:
 The project architecture is documented separately and will evolve alongside the implementation.
@@ -29,6 +33,50 @@ Technology and architectural decisions are documented as Architecture Decision R
 Architecture diagrams are maintained under:
 
 * `docs/architecture/diagrams/`
+
+## Getting Started
+
+### Prerequisites
+
+* Python 3.11 or later
+* A [Discord application](https://discord.com/developers/applications) with a bot token
+
+### Setup
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e ".[dev]"
+cp .env.example .env
+# Edit .env and set DISCORD_TOKEN
+```
+
+### Run the bot
+
+```bash
+python -m discord_reminder_bot
+```
+
+The bot responds to `!ping` with a latency check once connected.
+
+### Run tests
+
+```bash
+pytest
+```
+
+## Project Structure
+
+```
+src/discord_reminder_bot/
+├── bot/           # Discord client, commands, and events
+├── approval/      # Moderator approval workflow
+├── reminders/     # Core reminder logic and models
+├── canvas/        # Canvas LMS API integration
+├── scheduler/     # Background reminder tasks
+├── persistence/   # Durable state storage
+└── cache/         # Temporary in-memory cache
+```
 
 ## Development
 
